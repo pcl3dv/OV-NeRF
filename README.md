@@ -28,6 +28,22 @@ Guibiao Liao<sup>1,2</sup>, Kaichen Zhou<sup>3</sup>, Zhenyu Bao<sup>1,2</sup>, 
 <img src="https://github.com/pcl3dv/OV-NeRF/blob/main/images/result_3dovs.png">
 
 
+## Quantitative Result 
+### Replica
+<div align="center">
+<img src="https://github.com/pcl3dv/OV-NeRF/blob/main/images/quantitative_result_replica.png" width="500" >
+</div>
+
+### ScanNet
+<div align="center">
+<img src="https://github.com/pcl3dv/OV-NeRF/blob/main/images/quantitative_result_scannet.png" width="800">
+</div>
+
+### 3DOVS
+<div align="center">
+<img src="https://github.com/pcl3dv/OV-NeRF/blob/main/images/quantitative_result_3dovs.png" width="800">
+</div>
+
 ## Citation
 Cite below if you find this repository helpful to your project:
 ```
