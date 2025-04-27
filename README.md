@@ -1,6 +1,6 @@
 <div align="center">
 
-# OV-NeRF: Open-vocabulary Neural Radiance Fields with Vision and Language Foundation Models for <br /> 3D Semantic Understanding 
+# OV-NeRF: Open-vocabulary Neural Radiance Fields with Vision and Language Foundation Models for 3D Semantic Understanding 
 Guibiao Liao<sup>1,2</sup>, Kaichen Zhou<sup>3</sup>, Zhenyu Bao<sup>1,2</sup>, Kanglin Liu<sup>2, *</sup>, Qing Li<sup>2, *</sup>
 
 <sup>1</sup>Peking University    <sup>2</sup>Pengcheng Laboratory    <sup>3</sup>University of Oxford
@@ -45,7 +45,53 @@ Guibiao Liao<sup>1,2</sup>, Kaichen Zhou<sup>3</sup>, Zhenyu Bao<sup>1,2</sup>, 
 </div>
 
 
-Code will be released. Please stay tuned.
+## Installation
+> Tested on Ubuntu 18.04 + Pytorch 1.12.1+cu116
+
+On default, run the following commands to install the relative packages
+```
+conda create -n ovnerf python=3.9
+conda activate ovnerf
+pip install torch==1.12.1+cu116 torchvision==0.13.1+cu116 torchaudio==0.12.1 --extra-index-url https://download.pytorch.org/whl/cu116
+pip install ftfy regex tqdm scikit-image opencv-python configargparse lpips imageio-ffmpeg kornia tensorboard
+pip install git+https://github.com/openai/CLIP.git
+pip install git+https://github.com/facebookresearch/segment-anything.git
+```
+
+<!-- ## Datasets -->
+
+<!-- ## Data Preparation -->
+
+
+
+## Training
+### 1. Train original TensoRF
+This step is for reconstructing the TensoRF for the scenes. Please modify the `datadir` and `expname` in `configs/resonstruction.txt` to specify the dataset path and the experiment name. By default we set `datadir` to `data/$scene_name` and `expname` as `$scene_name`. You can then train the original TensoRF by:
+```
+bash script/reconstruction.sh [GPU_ID]
+```
+The reconstructed TensoRF will be saved in `log/$scene_name`.
+
+
+### 2. Train segmentation 
+We provide the training script for our datasets under `configs` as `$scene_name.txt`. You can train the segmentation by:
+```
+bash scripts/segmentation.sh [CONFIG_FILE] [GPU_ID] 
+```
+The trained model will be saved in `log_seg/$scene_name`. The training takes about 1h30min and consumes about 14GB GPU memory.
+
+
+## TODO list
+- [x] release the code of the training
+- [x] release the code of the evaluation
+- [x] update the arxiv link
+- [ ] release the code of preprocessing
+- [ ] release the the pretrained model
+- [ ] release the preprocessed dataset
+
+
+## Acknowledgements
+Some codes are borrowed from [TensoRF](https://github.com/apchenstu/TensoRF), [SAM](https://github.com/facebookresearch/segment-anything) and [3DOVS](https://github.com/Kunhao-Liu/3D-OVS). We thank all the authors for their great work. 
 
 
 ## Citation
