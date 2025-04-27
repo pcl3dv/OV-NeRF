@@ -1,6 +1,6 @@
 <div align="center">
 
-# OV-NeRF: Open-vocabulary Neural Radiance Fields with Vision and Language Foundation Models for 3D Semantic Understanding 
+## OV-NeRF: Open-vocabulary Neural Radiance Fields with Vision and Language Foundation Models for 3D Semantic Understanding 
 Guibiao Liao<sup>1,2</sup>, Kaichen Zhou<sup>3</sup>, Zhenyu Bao<sup>1,2</sup>, Kanglin Liu<sup>2, *</sup>, Qing Li<sup>2, *</sup>
 
 <sup>1</sup>Peking University    <sup>2</sup>Pengcheng Laboratory    <sup>3</sup>University of Oxford
