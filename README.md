@@ -70,7 +70,7 @@ This step is for reconstructing the TensoRF for the scenes. Please modify the `d
 ```
 bash script/reconstruction.sh [GPU_ID]
 ```
-The reconstructed TensoRF will be saved in `log/$scene_name`.
+The reconstructed TensoRF will be saved in `log/$dataset/$scene_name`.
 
 
 ### 2. Train segmentation 
@@ -78,7 +78,17 @@ We provide the training script for our datasets under `configs` as `$scene_name.
 ```
 bash scripts/segmentation.sh [CONFIG_FILE] [GPU_ID] 
 ```
-The trained model will be saved in `log_seg/$scene_name`. The training takes about 1h30min and consumes about 14GB GPU memory.
+The trained model will be saved in `log_seg/$dataset/$scene_name`. 
+
+### 3. Evaluate reconstruction
+```
+bash script/test_reconstruction.sh
+```
+
+### 4. Evaluate segmentation
+```
+bash script/test_segmentation.sh
+```
 
 
 ## TODO list
@@ -86,8 +96,8 @@ The trained model will be saved in `log_seg/$scene_name`. The training takes abo
 - [x] release the code of the evaluation
 - [x] update the arxiv link
 - [ ] release the code of preprocessing
-- [ ] release the the pretrained model
 - [ ] release the preprocessed dataset
+- [ ] release the the pretrained model
 
 
 ## Acknowledgements
