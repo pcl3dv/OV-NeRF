@@ -1,0 +1,11 @@
+CUDA_VISIBLE_DEVICES=0 python train_seg.py \
+--config $2 \
+--ckpt $1 \
+--render_only 1 \
+--render_seg_train 0 \
+--render_seg_test 1 \
+--render_seg_path 0 \
+--render_seg_depth 0 \
+--render_feature 0 \
+--render_select 0 \
+--downsample_test 8

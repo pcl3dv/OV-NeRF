@@ -1,0 +1,46 @@
+expname = seg_scene0004_00
+ckpt = log/scannet/scene0004_00/scene0004_00.th
+dataset_name = scannet_CLIP
+datadir = data/scene0004_00
+
+feature_dir = clip_features/scannet/scene0004_00
+basedir = log_seg/scannet/scene0004_00
+
+
+dino_pos_weight = 2e2
+dino_neg_weight = 0.2
+relevancy_weight = 1
+relation_weight = 0.0
+ssim_relation_weight = 0.0 
+p2p_relation_weight = 0.0 
+Textp2p_relation_weight = 0.0 
+
+
+clip_input = 0.5           \
+has_segmentation_maps = 1  # 1
+# test_prompt = 0
+
+ray_downsample_train = 2 
+patch_downsample_train = 2
+
+dino_shift = 0.7
+temperature = 0.2
+
+n_iters = 15000
+joint_start_iter = 5000
+
+patch_num = 8
+patch_size = 256           
+batch_size = 4096  # 4096
+chunk_size = 4096
+
+N_voxel_init = 2097156 # 128**3
+N_voxel_final = 262144000 # 640**3
+upsamp_list = [2000,3000,4000,5500]
+update_AlphaMask_list = [2500]
+
+n_lamb_sigma = [16,4,4]
+n_lamb_sh = [48,12,12]
+
+fea2denseAct = relu
+
