@@ -66,7 +66,7 @@ pip install git+https://github.com/facebookresearch/segment-anything.git
 
 ## Training
 ### 1. Train original TensoRF
-This step is for reconstructing the TensoRF for the scenes. Please modify the `datadir` and `expname` in `configs/resonstruction.txt` to specify the dataset path and the experiment name. By default we set `datadir` to `data/$scene_name` and `expname` as `$scene_name`. You can then train the original TensoRF by:
+This step is for reconstructing the TensoRF for the scenes. Please modify the `datadir` and `expname` in `configs/resonstruction/$scene_name.txt` to specify the dataset path and the experiment name. By default we set `datadir` to `data/$scene_name` and `expname` as `$scene_name`. You can then train the original TensoRF by:
 ```
 bash script/reconstruction.sh [GPU_ID]
 ```
