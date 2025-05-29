@@ -45,6 +45,11 @@ Guibiao Liao<sup>1,2</sup>, Kaichen Zhou<sup>3</sup>, Zhenyu Bao<sup>1,2</sup>, 
 </div>
 
 
+## Data Preparation
+We provide the preprocessed dataset here. You can download them through the following link. 
+[Google Drive](https://drive.google.com/drive/folders/1VZ9kKxrNqON5ICOZKay2Ez0-k6AN2iaC?usp=sharing) | [BaiduWangpan](https://pan.baidu.com/s/1VGilbgNX-rxfwDkf0X7IUw?pwd=99ny)
+
+
 ## Installation
 > Tested on Ubuntu 18.04 + Pytorch 1.12.1+cu116
 
@@ -95,8 +100,8 @@ bash script/test_segmentation.sh
 - [x] release the code of the training
 - [x] release the code of the evaluation
 - [x] update the arxiv link
+- [x] release the preprocessed dataset
 - [ ] release the code of preprocessing
-- [ ] release the preprocessed dataset
 - [ ] release the the pretrained model
 
 
